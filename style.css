@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 84%);
+}
+.continer{
+    width: 345px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+.img{
+    width: 100%;
+    content: url('./images/image-product-mobile.jpg');
+    background-repeat: no-repeat;
+    border-radius: 12px 12px 0 0;
+}
+.text{
+    margin: 15px;
+}
+.top-text p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 2px;
+}
+.title{
+    font-family: 'Fraunces';
+    margin-top: 1vw;
+    font-size: x-large;
+    line-height: 2.4rem
+}
+.info{
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.price p{
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 30px;
+}
+.price s{
+    color: hsl(228, 12%, 48%);
+    margin-left: 10px;
+}
+div.btn{
+    width: 100%;
+    text-align: center;
+}
+div.btn span{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: hsl(158, 36%, 37% );
+    border-radius: 12px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: 0.2s;
+}
+span::before{
+    content: url('./images/icon-cart.svg');
+    margin-right: 10px;
+}
+div.btn span:hover{
+    background-color: hsl(183, 38%, 18%);
+}
+@media screen and (min-width: 650px){
+    .continer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+    .img{
+        content: url('./images/image-product-desktop.jpg');
+        width: 50%;
+        border-radius: 12px 0px 0px 12px;
+    }
+    .text{
+        width: 40%;
+    }
+    .btn{
+        margin-top: 3vw;
+    }
+    
+    .info{
+        margin: 15px 0px;
+    }
+}
